@@ -27,12 +27,14 @@ def n_ssum(n): # 정답 ㅠㅜ
 # print(n_ssum(100))
 # print(n_sum(100))
 
-# 연습문제 1-1
+# 연습문제 1-1 (o)
 def sq_sum(n):
     out = 0
     for i in range(1,n+1):
         out += i**2
     return out
+# print(sq_sum(10))
+# print(sq_sum(100))
 
 # 1-2
 '''O(n)'''
@@ -60,13 +62,14 @@ def index_max(l):
 # print(index_max(a))
 # print(max(a))
 
-# 연습문제
+# 연습문제 2-1
 def i_min(l):
     m = l[0]
     for i in l[1:]:
-        if m > l[i]:
-            m=l[i]
+        if m > i:
+            m=i
     return m
+# print(i_min([17,92,18,33, 58, 7, 33, 42]))
 
 # 3
 def dongmung(l):
@@ -81,13 +84,18 @@ def dongmung(l):
 a=['tom', 'robert', 'bert', 'sara', 'jw', 'tom']
 print(dongmung(a))
 
-# 연습문제
+# 연습문제 3-1 (o)
 def jjack(l):
-    jj=[]
+    # jj=[]
     n = len(l)
-    for i in range(n):
+    for i in range(n-1):
         for j in range(i+1,n):
-            jj.append([l[i],l[j]])
-    return jj
+            # jj.append([l[i],l[j]])
+            print(l[i],'-',l[j])
+    # return jj
 
+name = ["Tom", "Jerry", "Mike", "John"]
+jjack(name)
+
+# 3-2
 '''O(1), O(n), O(n**2), O(n^4)'''
